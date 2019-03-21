@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>HairDyeChangeHairColor</defName>
+    <driverClass>HairDye.JobDriver_ChangeHairColor</driverClass>
+    <reportString>usng a dye to change hair color.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

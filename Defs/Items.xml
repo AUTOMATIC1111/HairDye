@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Name="HairDyeItemBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+    
+  <ThingDef ParentName="HairDyeItemBase">
+    <defName>HairDyeBox</defName>
+    <label>hair dye</label>
+    <description>A box of hair dye, enough to change colonist's hair once.</description>
+    <graphicData>
+      <texPath>HairDye/DyeBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+
+    <comps>
+        <li><compClass>HairDye.ThingCompHairDye</compClass></li>
+    </comps>
+
+    <statBases>
+      <WorkToMake>150</WorkToMake>
+      <Flammability>0.0</Flammability>
+      <Beauty>0</Beauty>
+      <Mass>0.5</Mass>
+    </statBases>
+    
+    <tradeTags>
+      <li>ExoticMisc</li>
+	</tradeTags>
+	<thingCategories>
+      <li>Items</li>
+    </thingCategories>
+	
+	<recipeMaker>
+		<recipeUsers><li>DrugLab</li></recipeUsers>
+	</recipeMaker>
+	<costList>
+		<MedicineHerbal>5</MedicineHerbal>
+	</costList>
+  </ThingDef>
+  
+</Defs>

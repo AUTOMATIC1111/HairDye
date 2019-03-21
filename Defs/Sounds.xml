@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef Abstract="True" Name="HairDyeSound">
+    <context>MapOnly</context>
+    <eventNames />
+  </SoundDef>
+
+  <SoundDef ParentName="HairDyeSound">
+    <defName>HairDyeBubbles</defName>  
+    <sustain>true</sustain>
+    <maxSimultaneous>2</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>HairDye/Bubbles</clipPath>
+          </li>
+        </grains>
+        <volumeRange><min>65</min><max>65</max></volumeRange>
+        <sustainAttack>0.25</sustainAttack>
+        <sustainRelease>0.25</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef ParentName="RadiologySound">
+    <defName>HairDyePop</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>HairDye/Pop</clipPath>
+          </li>
+        </grains>
+        <volumeRange><min>50</min><max>50</max></volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

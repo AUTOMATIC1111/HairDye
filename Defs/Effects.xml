@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="HairDyeMoteBase" Abstract="True">
+    <thingClass>MoteThrown</thingClass>
+    <label>Mote</label>
+    <category>Mote</category>
+    <graphicData>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+    <rotatable>false</rotatable>
+  </ThingDef>
+
+  <ThingDef ParentName="HairDyeMoteBase" >
+    <defName>HairDyeBubbles</defName>
+    <graphicData><texPath>HairDye/Effects/Bubbles</texPath></graphicData>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <solidTime>0.6</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="HairDyeMoteBase" >
+    <defName>HairDyeBubble</defName>
+    <graphicData><texPath>HairDye/Effects/Bubble</texPath></graphicData>
+    <mote>
+      <fadeInTime>0.3</fadeInTime>
+      <solidTime>0.3</solidTime>
+      <fadeOutTime>0.3</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="HairDyeMoteBase">
+    <defName>HairDyeBubbleFast</defName>
+    <graphicData><texPath>HairDye/Effects/Bubble</texPath></graphicData>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.4</solidTime>
+      <fadeOutTime>0.7</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <HairDye.EffectSpawnerDef>
+    <defName>HairDyeEffectBubbles</defName>
+      
+    <subEffects>
+      <li Class="HairDye.SubEffectRadial">
+        <mote>HairDyeBubbles</mote>
+        <moteCount>2</moteCount>
+        <radius><min>0.03</min><max>0.09</max></radius>
+        <scale><min>0.5</min><max>1.0</max></scale>
+        <rotationRate><min>-45</min><max>45</max></rotationRate>
+        <speed>0.05</speed>
+      </li>
+      <li Class="HairDye.SubEffectRadial">
+        <mote>HairDyeBubble</mote>
+        <moteCount>5</moteCount>
+        <radius><min>0</min><max>0.2</max></radius>
+        <scale><min>0.04</min><max>0.2</max></scale>
+        <speed>0.5</speed>
+      </li>
+    </subEffects>
+    
+    <offset><min>0</min><max>0</max></offset>
+  </HairDye.EffectSpawnerDef>
+  
+  <HairDye.EffectSpawnerDef>
+    <defName>HairDyeEffectBubblesFinished</defName>
+      
+    <subEffects>
+      <li Class="HairDye.SubEffectRadial">
+        <mote>HairDyeBubbleFast</mote>
+        <moteCount>64</moteCount>
+        <radius><min>0.0</min><max>0.1</max></radius>
+        <scale><min>0.04</min><max>0.2</max></scale>
+        <speed>1.0</speed>
+      </li>
+    </subEffects>
+    
+    <offset><min>0</min><max>0</max></offset>
+  </HairDye.EffectSpawnerDef>
+  
+  
+  
+</Defs>

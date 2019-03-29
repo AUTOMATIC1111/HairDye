@@ -25,7 +25,7 @@
     </subSounds>
   </SoundDef>
   
-  <SoundDef ParentName="RadiologySound">
+  <SoundDef ParentName="HairDyeSound">
     <defName>HairDyePop</defName>  
     <maxSimultaneous>1</maxSimultaneous>  
     <subSounds>

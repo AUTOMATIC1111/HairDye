@@ -63,8 +63,10 @@ namespace HairDye
                     if (comp.hairData == null) return;
 
                     comp.hairData.Write(pawn);
-                    Dye.Destroy(DestroyMode.Vanish);
-                    
+
+                    if (Dye.stackCount > 1) Dye.stackCount--;
+                    else Dye.Destroy(DestroyMode.Vanish);
+
                     pawn.Drawer.renderer.graphics.ResolveAllGraphics();
                     PortraitsCache.SetDirty(pawn);
                 }

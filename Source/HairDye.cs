@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System.Reflection;
 using Verse;
 
@@ -10,7 +10,7 @@ namespace HairDye
 
         static HairDye()
         {
-            var harmony = HarmonyInstance.Create("com.github.automatic1111.hairdye");
+            var harmony = new Harmony("com.github.automatic1111.hairdye");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             Log.Message("Available: " + GradientHairApi.GradientHairIsAvailable());

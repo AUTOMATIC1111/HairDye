@@ -12,8 +12,6 @@ namespace HairDye
         {
             var harmony = new Harmony("com.github.automatic1111.hairdye");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-            Log.Message("Available: " + GradientHairApi.GradientHairIsAvailable());
         }
     }
 }

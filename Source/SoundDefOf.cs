@@ -12,7 +12,7 @@ namespace HairDye
     {
         static SoundDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(SoundDef));
+            DefOfHelper.EnsureInitializedInCtor(typeof(SoundDefOf));
         }
 
         public static SoundDef HairDyeBubbles;

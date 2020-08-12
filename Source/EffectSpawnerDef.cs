@@ -106,7 +106,7 @@ namespace HairDye
     public static class EffectSpawnerDefOf {
         static EffectSpawnerDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(EffectSpawnerDef));
+            DefOfHelper.EnsureInitializedInCtor(typeof(EffectSpawnerDefOf));
         }
 
         public static EffectSpawnerDef HairDyeEffectBubbles;

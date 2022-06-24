@@ -80,7 +80,6 @@ namespace HairDye
             }
         }
 
-
         public RenderTexture PawnPortrait(Pawn pawn, Rect portraitRect)
         {
             if (!needRefresh) return portrait;
@@ -90,7 +89,8 @@ namespace HairDye
             pawn.Drawer.renderer.graphics.ResolveAllGraphics();
 
             portrait = new RenderTexture((int) portraitRect.width, (int) portraitRect.height, 24);
-            Find.PortraitRenderer.RenderPortrait(pawn, portrait, new Vector3(0f, 0f, 0f), 1f);
+
+            Find.PawnCacheRenderer.RenderPawn(pawn, portrait, default(Vector3), 1f, 0f, Rot4.South, pawn.health.hediffSet.HasHead, true, true, true, true, default(Vector3));
 
             originalHairData.Write(pawn);
             pawn.Drawer.renderer.graphics.ResolveAllGraphics();

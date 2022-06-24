@@ -66,7 +66,7 @@ namespace HairDye
                     if (Dye.stackCount > 1) Dye.stackCount--;
                     else Dye.Destroy(DestroyMode.Vanish);
 
-                    pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+                    pawn.Drawer.renderer.graphics.SetAllGraphicsDirty();
                     PortraitsCache.SetDirty(pawn);
                 }
             }.PlaySustainerOrSound(SoundDefOf.HairDyePop);

@@ -21,12 +21,12 @@ namespace HairDye
         }
 
         public void Read(Pawn pawn) {
-            colorA = pawn.story.hairColor;
+            colorA = pawn.story.HairColor;
             GradientHairApi.GetGradientHair(pawn, out gradientHairEnabled, out colorB);
         }
 
         public void Write(Pawn pawn) {
-            pawn.story.hairColor = colorA;
+            pawn.story.HairColor = colorA;
             GradientHairApi.SetGradientHair(pawn, gradientHairEnabled, colorB);
         }
     }

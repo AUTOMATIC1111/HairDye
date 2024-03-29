@@ -93,7 +93,7 @@ namespace HairDye
                 float actualScale = scale.LerpThroughRange(magnitude);
                 moteThrown.exactPosition = origin + dir * radius.LerpThroughRange(magnitude);
                 moteThrown.exactRotation = angle;
-                moteThrown.exactScale = new Vector3(actualScale, actualScale, actualScale);
+                moteThrown.linearScale = new Vector3(actualScale, actualScale, actualScale);
                 moteThrown.SetVelocity(angle, magnitude * speed);
                 moteThrown.rotationRate = rotationRate.RandomInRange;
                 GenSpawn.Spawn(moteThrown, origin.ToIntVec3(), map, WipeMode.Vanish);

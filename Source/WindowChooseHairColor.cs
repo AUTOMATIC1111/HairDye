@@ -86,14 +86,14 @@ namespace HairDye
             needRefresh = false;
 
             hairData.Write(pawn);
-            pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+            pawn.Drawer.renderer.SetAllGraphicsDirty();
 
             portrait = new RenderTexture((int) portraitRect.width, (int) portraitRect.height, 24);
 
-            Find.PawnCacheRenderer.RenderPawn(pawn, portrait, default(Vector3), 1f, 0f, Rot4.South, pawn.health.hediffSet.HasHead, true, true, true, true, default(Vector3));
+            Find.PawnCacheRenderer.RenderPawn(pawn, portrait, default(Vector3), 1f, 0f, Rot4.South, true, true, true, true, default(Vector3));
 
             originalHairData.Write(pawn);
-            pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+            pawn.Drawer.renderer.SetAllGraphicsDirty();
 
             return portrait;
         }
